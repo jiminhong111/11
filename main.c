@@ -5,21 +5,18 @@
 
 int main(int argc, char *argv[]) {
 	
-	char *pc;
-	int *pi;
-	double *pd;
+	int i = 10;
+	int * ptr = &i;
 	
-	pc=(char*)10000;
-	pi=(int*)10000;
-	pd=(double*)10000;
 	
-	printf("증가전: pc = %d, pi = %d, pd =%d\n", pc, pi, pd);
+	printf("i = %d, pi : %p\n", i, ptr);
 	
-	pc++;
-	pi++;
-	pd++;
+	(*ptr)++;
+	printf("i = %d, pi : %p\n", i, ptr);
 	
-	printf("증가후 : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+	*ptr++;
+	printf("i = %d, pi : %p\n", i, ptr);
+
 	
 	return 0;
 }
